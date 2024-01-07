@@ -19,8 +19,8 @@ public class Carregister {
     @FXML
     void reg(ActionEvent event) throws IOException {
         try( MongoClient client = new MongoClient("localhost", 27017)) {
-            MongoDatabase database =client.getDatabase("test007");
-            MongoCollection<Document> collection = database.getCollection("123");
+            MongoDatabase database =client.getDatabase("car");
+            MongoCollection<Document> collection = database.getCollection("info");
 
             String first_name = "Spider";
             String last_name = "man";

@@ -52,8 +52,8 @@ public class LoginController {
     @FXML
     void loginbtnclick(ActionEvent event) throws Exception {
         try(MongoClient client = new MongoClient("localhost",27017)){
-            MongoDatabase db =  client.getDatabase("test007");
-            db.createCollection("123");
+            MongoDatabase db =  client.getDatabase("car");
+            db.createCollection("info");
 
             MongoCollection<Document> coll = db.getCollection("123");
         String user_name = "Spider78";

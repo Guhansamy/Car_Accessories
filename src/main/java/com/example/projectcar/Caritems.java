@@ -57,9 +57,9 @@ public class Caritems {
     void deletebtn(ActionEvent event) {
 
         try (MongoClient client = new MongoClient("localhost",27017)){
-            MongoDatabase db =  client.getDatabase("test007");
-            db.createCollection("123");
-            MongoCollection<Document> coll = db.getCollection("123");
+            MongoDatabase db =  client.getDatabase("car");
+            db.createCollection("info");
+            MongoCollection<Document> coll = db.getCollection("info");
 
             // Specify the field name and its value for deletion
             String fieldName = "yourFieldName";
@@ -83,8 +83,8 @@ public class Caritems {
 
         try (MongoClient client = new MongoClient("localhost", 27017)) {
 
-            MongoDatabase database = client.getDatabase("test007");
-            MongoCollection<Document> collection = database.getCollection("AddTable");
+            MongoDatabase database = client.getDatabase("car");
+            MongoCollection<Document> collection = database.getCollection("Add");
 
             FindIterable<Document> Find = collection.find();
 

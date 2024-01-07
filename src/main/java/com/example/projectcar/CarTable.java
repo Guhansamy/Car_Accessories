@@ -39,8 +39,8 @@ public class CarTable {
     @FXML
     void add(ActionEvent event) throws IOException {
         try (MongoClient client = new MongoClient("localhost", 27017)) {
-            MongoDatabase database = client.getDatabase("test007");
-            MongoCollection<Document> collection = database.getCollection("AddTable");
+            MongoDatabase database = client.getDatabase("car");
+            MongoCollection<Document> collection = database.getCollection("Add");
             String name_ = name.getText();
             String Id_ = id.getText();
             String Category_=category.getText();
